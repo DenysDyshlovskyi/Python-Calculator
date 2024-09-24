@@ -23,6 +23,9 @@ def dele():
     if int(tall2) <= 0:
         print("[ERROR] - Kan ikke dele på 0!")
         return
+    elif int(tall1) <= 0:
+        print("[ERROR] - Kan ikke dele 0 (Eksempel: 0 / 10 = 0)!")
+        return
     result = int(tall1) / int(tall2)
     print(f'{tall1} / {tall2} = {result}')
     
