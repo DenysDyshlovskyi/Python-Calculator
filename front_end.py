@@ -22,8 +22,10 @@ def utfoerMenyvalg(valgtTall):
         pause_og_fortsett()
     elif valgtTall == "3":
         gange()
+        pause_og_fortsett()
     elif valgtTall == "4":
         dele()
+        pause_og_fortsett()
     elif valgtTall == "5":
         bekreftelse = input("Er du sikker på at du vil avslutte? J/N ")
         if (bekreftelse == "J" or bekreftelse == "j"):
