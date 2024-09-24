@@ -3,11 +3,12 @@ from back_end import *
 
 def printMeny():
     print("------------------- Kalkulator -------------------")
-    print("| 1. Legg sammen (pluss)                         |")
-    print("| 2. Trekk fra   (minus)                         |")
-    print("| 3. Gange       (gange)                         |")
-    print("| 4. Dele        (dele)                          |")
-    print("| 5. Avslutt                                     |")
+    print("| 1. Legg sammen                                 |")
+    print("| 2. Trekk fra                                   |")
+    print("| 3. Gange                                       |")
+    print("| 4. Dele                                        |")
+    print("| 5. Regn ut gjennomsnitt                        |")
+    print("| 6. Avslutt                                     |")
     print("--------------------------------------------------")
     menyvalg = input("Velg operasjon fra menyen: ")
     utfoerMenyvalg(menyvalg)
@@ -27,17 +28,18 @@ def utfoerMenyvalg(valgtTall):
         dele()
         pause_og_fortsett()
     elif valgtTall == "5":
+        snitt()
+        pause_og_fortsett()
+    elif valgtTall == "6":
         bekreftelse = input("Er du sikker på at du vil avslutte? J/N ")
         if (bekreftelse == "J" or bekreftelse == "j"):
             exit()
         else:
             printMeny()
     else:
-        nyttForsoek = input("*** Ugyldig valg."
-                            "Velg et tall mellom 1-4."
-                            " Trykk for å fortsette *** ")
+        print("Ugyldig valg. Velg et tall fra 1-6. Trykk en tast for å fortsette")
         printMeny()
-
+    
 
 def pause_og_fortsett():
     input("-- Trykk en tast for å fortsette --")

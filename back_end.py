@@ -29,3 +29,13 @@ def dele():
     result = int(tall1) / int(tall2)
     print(f'{tall1} / {tall2} = {result}')
     
+def snitt():
+    total = 0
+    amount = int(input("Hvor mange tall vil du ha gjennomsnitt av? "))
+    for i in range(amount):
+        userinput = int(input(f"Skriv inn tall nummer {i+1}: "))
+        total = total + userinput
+    snitt = total / amount
+    print(snitt)
+    
+    
