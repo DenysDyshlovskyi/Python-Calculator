@@ -22,6 +22,6 @@ def dele():
     tall2 = input("Skriv inn det andre tallet: ")
     result = int(tall1) / int(tall2)
     print(f'{tall1} / {tall2} = {result}')
-    if int(tall2) <= 0:
+    if int(tall2) <= "0":
         print("[ERROR] - Kan ikke dele på 0!")
         return
